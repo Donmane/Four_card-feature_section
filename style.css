@@ -29,7 +29,6 @@ font-weight: 100;
 .card_o{
     border-radius: .5rem;
     padding: 2.5rem 3rem;
-    margin-bottom: 3rem;
     box-shadow: 0 1rem 2rem .5rem #dedede;
     border-top: .5rem solid #57cbca;
     grid-area: start;
@@ -42,6 +41,7 @@ font-weight: 100;
     justify-content: right;
 }
 .cards{
+    display: grid;
     margin: 7.5rem  8% 0;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows:  (2, 1fr);
@@ -79,4 +79,17 @@ margin-bottom: 3rem;
 box-shadow: 0 1rem 2rem .5rem #dedede;
 border-top: .5rem solid hsl(34, 97%,   64%);
 grid-area: mid2;
+}
+@media (max-width: 769px) {
+    .cards{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .card_o, .Team, .calculator, .karma{
+        align-self: stretch;
+    }
+    .first h1,.first h2, .first p{
+        font-size: 1.6rem;
+    }
 }
